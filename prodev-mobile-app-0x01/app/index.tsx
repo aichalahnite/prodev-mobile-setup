@@ -1,9 +1,23 @@
-import { View, Text, TouchableOpacity } from "react-native";
-import { StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+
+export default function Index() {
+  return (
+    <View style={styles.container}>
+      <View>
+        <Text style={styles.largeText}>Typescript is great if you practice more</Text>
+        <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>
+        <Text style={styles.smallText}>ALX is awesome</Text>
+      </View>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#90caf9",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
   largeText: {
     fontSize: 30,
@@ -26,14 +40,3 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
-
-export default function App() {
-  return (
-    <View className="flex-1 justify-center items-center bg-gray-100">
-      <Text className="text-3xl font-bold text-purple-600">Welcome to My App</Text>
-      <TouchableOpacity className="mt-4 px-6 py-2 bg-blue-500 rounded-full">
-        <Text className="text-white">Click Me</Text>
-      </TouchableOpacity>
-    </View>
-  );
-}
